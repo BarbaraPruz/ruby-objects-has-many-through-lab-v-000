@@ -1,8 +1,9 @@
 class Appointment
-  # not providing writer for doctor.  If we did, it would be custom
+  # Should not provide writer for doctor but test requires it.
+  # If generally required, the doctor should be custom
   # so that appointment can be removed from previous doctor and then added to new doctor
    attr_reader :date, :doctor
-   attr_writer :patient, :date
+   attr_writer :patient, :date, :doctor
 
    def initialize (date, doctor)
      @date = date
