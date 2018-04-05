@@ -3,7 +3,7 @@ class Appointment
   # If generally required, the doctor should be custom
   # so that appointment can be removed from previous doctor and then added to new doctor
    attr_reader :date, :doctor, :patient
-   attr_writer :patient, :date, :doctor
+   attr_writer :patient, :date #, :doctor
 
    def initialize (date, doctor)
      @date = date
