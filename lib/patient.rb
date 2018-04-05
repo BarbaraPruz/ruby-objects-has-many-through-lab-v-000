@@ -8,7 +8,7 @@ class Patient
   end
 
   def add_appointment (appointment)
-    binding.pry
+#    binding.pry
     appointment.patient = self
     appointments << appointment
   end
