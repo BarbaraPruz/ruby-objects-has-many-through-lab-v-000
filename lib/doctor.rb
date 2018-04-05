@@ -9,7 +9,7 @@ class Doctor
   end
 
   def add_appointment (appointment)
-    binding.pry
+  #  binding.pry
     appointment.doctor = self   # just to make sure that all my appointments list me a Dr
     appointments.index(appointment) || appointments << appointment
     patients.index(appointment.patient).uniq! if appointment.patient != nil
