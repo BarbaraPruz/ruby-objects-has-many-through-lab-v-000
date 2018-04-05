@@ -1,6 +1,6 @@
 class Appointment
   # Should not provide writer for doctor but test requires it.
-  # If generally required, the doctor should be custom
+  # If generally required, the doctor writer should be custom
   # so that appointment can be removed from previous doctor and then added to new doctor
    attr_reader :date, :doctor, :patient
    attr_writer :patient, :date, :doctor
