@@ -1,4 +1,3 @@
-require "pry"
 class Patient
   attr_accessor :name, :appointments, :doctors
 
@@ -9,10 +8,9 @@ class Patient
   end
 
   def add_appointment (appointment)
-#    binding.pry
     doctors.index(appointment.doctor) || doctors << appointment.doctor
     appointment.patient = self
-    appointments << appointment
+    appointments << appointment  # probably should add check for uniqueness
   end
 
 end
