@@ -9,8 +9,7 @@ class Doctor
 
   def add_appointment (appointment)
     appointment.doctor = self
-    appointments << appointment
-
+    appointments.index(appointment) || appointments << appointment
   end
 
 end
