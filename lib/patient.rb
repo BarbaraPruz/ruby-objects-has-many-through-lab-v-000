@@ -5,6 +5,7 @@ class Patient
   def initialize (name)
     @name = name
     @appointments = []
+    @doctors = []
   end
 
   def add_appointment (appointment)
