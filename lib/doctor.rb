@@ -11,11 +11,11 @@ class Doctor
     appointments.index(appointment) || appointments << appointment
   end
 
-  # because appointment class lets patient be updated on the fly, we 
+  # because appointment class lets patient be updated on the fly, we
   # generate the patients array based on appointments when asked
   # Assumption is that appointments contains references to all patients
   # (so not like real world where I can have a Dr with no appointment)
-  def patients() 
+  def patients()
     appointments.map { | appointment | appointment.patient}.compact.uniq
   end
 end
