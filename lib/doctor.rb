@@ -1,21 +1,21 @@
-require "pry"
 class Doctor
-  attr_accessor :name, :appointments, :patients
+  attr_accessor :name, :appointments
 
   def initialize (name)
     @name = name
     @appointments = []
-    @patients = []
   end
 
   def add_appointment (appointment)
-  #  binding.pry
     appointment.doctor = self   # just to make sure that all my appointments list me a Dr
     appointments.index(appointment) || appointments << appointment
-    add_patient(appointment.patient) if appointment.patient != nil
   end
 
-  def add_patient(patient)
-    patients.index(patient) || patients << patient
+  # because appointment class lets patient be updated on the fly, we 
+  # generate the patients array based on appointments when asked
+  # Assumption is that appointments contains references to all patients
+  # (so not like real world where I can have a Dr with no appointment)
+  def patients() 
+    appointments.map { | appointment | appointment.patient}.compact.uniq
   end
 end
