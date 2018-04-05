@@ -5,7 +5,7 @@ class Appointment
      @date = date
      @doctor = doctor
      @patient = nil
-     binding.pry
+#     binding.pry
      doctor.add_appointment(self)
    end
 
