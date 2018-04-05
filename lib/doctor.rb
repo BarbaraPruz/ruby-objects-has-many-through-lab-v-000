@@ -8,7 +8,7 @@ class Doctor
   end
 
   def add_appointment (appointment)
-    appointment.doctor = self
+    appointment.doctor = self   # just to make sure that all my appointments list me a Dr
     appointments.index(appointment) || appointments << appointment
   end
 
